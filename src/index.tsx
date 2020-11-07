@@ -1,9 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import "bulma/css/bulma.css";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <div>Hello World!</div>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById("root"));
