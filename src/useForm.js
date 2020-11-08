@@ -12,7 +12,7 @@ const useForm = (callback, validate) => {
     if (Object.keys(errors).length === 0 && isSubmitting) {
       callback();
     }
-  }, [errors]); // 두번쨰 매개변수로 errors를 사용해서, errors에 변화가 있을때마다 호출된다.
+  }, [errors]); // 두번째 매개변수로 errors를 사용해서, errors에 변화가 있을때마다 호출된다.
 
   const handleSubmit = (event) => {
     if (event) event.preventDefault();

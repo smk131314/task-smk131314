@@ -93,6 +93,7 @@ const Form = () => {
               <button
                 type="submit"
                 className="button is-block is-info is-fullwidth"
+                // TODO:
                 // disabled={`${errors.terms && "disabled"}`} //terms 필수가 체크안되면 disabled
               >
                 결제하기
