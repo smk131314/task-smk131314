@@ -19,6 +19,9 @@ const useForm = (callback, validate) => {
     // submit하기 전에 validation확인하기 위해 hook의 상태에서 error로 저장된 값을 전달하여 저장
     setErrors(validate(values));
     setIsSubmitting(true);
+
+    // submit전에 약관동의 체크됐는지 확인, 체크돼야 버튼활성화
+    // console.log(''); 로 test
   };
 
   const handleChange = (event) => {
@@ -29,9 +32,35 @@ const useForm = (callback, validate) => {
     }));
   };
 
+  // const handleAllChecked = (event) => {
+  //   event.persist();
+  //   let terms = values.terms;
+  //   // check box group의 ischecked로 각각의 term들의 ischecked 바꿔준다.
+  //   terms.forEach((term) => (term.isChecked = event.target.checked));
+  //   setValues((values) => ({
+  //     ...values,
+  //     [event.target.name.value]: event.target.value.value,
+  //   }));
+  // };
+
+  // const handleChildCheck = (event) => {
+  //   event.persist();
+  //   let terms = values.terms;
+  //   terms.forEach((term) => {
+  //     if (term.value === event.target.value)
+  //       term.isChecked = event.target.checked;
+  //   });
+  //   setValues((values) => ({
+  //     ...values,
+  //     [event.target.name.value]: event.target.value.value,
+  //   }));
+  // };
+
   return {
     handleChange,
     handleSubmit,
+    // handleAllChecked,
+    // handleChildCheck,
     values,
     errors,
   };
