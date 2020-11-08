@@ -14,12 +14,12 @@ const Form = () => {
   );
 
   function login() {
+    console.log(values);
     console.log("No errors, submit callback called!");
     alert("예약이 완료 되었습니다.");
   }
 
   // const travelersCount = 2;
-  // const numbers = [...Array(travelersCount).keys()].map((key) => key + 1);
   // const numbers = [1, 2];
 
   // const TravelerList = (props) => {
@@ -50,8 +50,8 @@ const Form = () => {
         <div className="column is-4 is-offset-4">
           <div className="box">
             <form onSubmit={handleSubmit} noValidate>
+              {/* <TravelerList numbers={numbers} /> */}
               <TravelerForm
-                key={1}
                 engFirstname={values.engFirstname}
                 errorFirstname={errors.engFirstname}
                 engLastname={values.engLastname}
@@ -93,6 +93,7 @@ const Form = () => {
               <button
                 type="submit"
                 className="button is-block is-info is-fullwidth"
+                // disabled={`${errors.terms && "disabled"}`} //terms 필수가 체크안되면 disabled
               >
                 결제하기
               </button>
@@ -105,14 +106,6 @@ const Form = () => {
 };
 
 export default Form;
-
-/* <button
-  type="submit"
-  className="button is-block is-info is-fullwidth"
-  // disabled={`${errors.terms && "disabled"}`} //terms 필수가 체크안되면 disabled
->
-  결제하기
-</button>; */
 
 /* <TravelerForm
                 engFirstname={values.engFirstname}

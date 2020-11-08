@@ -32,35 +32,9 @@ const useForm = (callback, validate) => {
     }));
   };
 
-  // const handleAllChecked = (event) => {
-  //   event.persist();
-  //   let terms = values.terms;
-  //   // check box group의 ischecked로 각각의 term들의 ischecked 바꿔준다.
-  //   terms.forEach((term) => (term.isChecked = event.target.checked));
-  //   setValues((values) => ({
-  //     ...values,
-  //     [event.target.name.value]: event.target.value.value,
-  //   }));
-  // };
-
-  // const handleChildCheck = (event) => {
-  //   event.persist();
-  //   let terms = values.terms;
-  //   terms.forEach((term) => {
-  //     if (term.value === event.target.value)
-  //       term.isChecked = event.target.checked;
-  //   });
-  //   setValues((values) => ({
-  //     ...values,
-  //     [event.target.name.value]: event.target.value.value,
-  //   }));
-  // };
-
   return {
     handleChange,
     handleSubmit,
-    // handleAllChecked,
-    // handleChildCheck,
     values,
     errors,
   };

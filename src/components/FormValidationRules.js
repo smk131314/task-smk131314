@@ -2,6 +2,9 @@ export default function validate(values) {
   // useForm custom Hook의 에러를 열거
   let errors = {};
 
+  //test
+  // console.log(values);
+
   // 여행자
   const travelerValidation = (
     engFirstname,
@@ -109,48 +112,6 @@ export default function validate(values) {
 
   return errors;
 }
-
-///////////////////
-//여행자
-// // 필수 입력 값이 존재하는지 확인, 없으면 에러 object에 추가
-// if (!values.engFirstname || values.engFirstname.length < 2) {
-//   errors.engFirstname = "영어로 2자 이상 입력해주세요.";
-// }
-// // 존재한다면 포맷 확인
-// else if (values.engFirstname.length > 20) {
-//   errors.engFirstname = "최대 20자까지 입력 가능합니다.";
-// } else if (!/^[a-zA-Z\s]+$/.test(values.engFirstname)) {
-//   errors.engFirstname = "영어와 띄워쓰기만 입력 가능합니다.";
-// }
-
-// if (!values.engLastname || values.engLastname.length < 2) {
-//   errors.engLastname = "영어로 2자 이상 입력해주세요.";
-// }
-// // 존재한다면 포맷 확인
-// else if (values.engLastname.length > 20) {
-//   errors.engLastname = "최대 20자까지 입력 가능합니다.";
-// } else if (!/^[a-zA-Z\s]+$/.test(values.engLastname)) {
-//   errors.engLastname = "영어와 띄워쓰기만 입력 가능합니다.";
-// }
-
-// if (!values.korName || values.korName.length < 2) {
-//   errors.korName = "최소 2자 이상 입력해주세요.";
-// } else if (values.korName.length > 8) {
-//   errors.korName = "최대 20자까지 입력 가능합니다. ";
-// } else if (!/^[가-힣]*$/.test(values.korName)) {
-//   errors.korName = "한글만 입력 가능합니다.";
-// }
-
-// //성별
-// if (!values.gender) {
-//   errors.gender = "성별을 선택해 주세요.";
-// }
-// // 생년월일
-// if (!values.birth || values.birth.length < 6 || values.birth.length > 6) {
-//   errors.birth = "6자리의 생년월일을 입력해 주세요. ";
-// } else if (!/^[0-9]+$/.test(values.birth)) {
-//   errors.birth = "숫자만 입력 가능합니다.";
-// }
 
 // const travelerValidation = (
 //   engFirstname,
